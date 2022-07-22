@@ -1,0 +1,130 @@
+@import "null"; //обнуляем параметры
+//@import "icons";
+
+//Шрифт по умолчанию
+
+$fontFamily: 'Poppins', sans-serif;
+$fontSize: 24;
+
+//ПЕРЕМЕННЫЕ
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 1090; //+30px
+$md1: ($maxWidthContainer + 12)+px;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+
+$colorTitle: #231F20;
+$colorGrey: #73686B;
+
+body {
+	color: $colorGrey;
+	font-family: $fontFamily;
+	font-size: $fontSize+px;
+
+}
+
+//<ОБОЛОЧКА>
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden; //контент обрезается без предоставления прокрутки
+	display: flex;
+	flex-direction: column;
+}
+//<end ОБОЛОЧКА>
+
+//<ОСНОВНАЯ СЕТКА>
+.container {
+	max-width: $maxWidthContainer + px;
+	padding: 0px 15px; //вот те 30px
+	margin: 0 auto;
+}
+footer,
+header {
+	flex: 0 0 auto;
+}
+main {
+	flex: 1 1 auto;
+}
+//<end ОСНОВНАЯ СЕТКА>
+
+//MAIN ELEMENT
+.btn {
+	background: #FFFFFF;
+	box-shadow: -12px 5px 30px 1px rgba(0, 0, 0, 0.25);
+	border-radius: 7px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	color: #000000;
+}
+//end MAIN ELEMENT
+
+
+//<style>
+
+//HEADER
+.head {
+	max-height: 850px;
+	background: linear-gradient(291.45deg, #F83B7F -3.37%, #FAAF1E 114.15%);
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 28px 118px;
+	&__menu {
+		display: flex;
+		flex-direction: row;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: (46/16)+em;
+		}
+		a {
+			color: #FFFFFF;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__logo {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 72px;
+		color: #FFFFFF;
+		transition: all 0.6s ease 0.1s;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	&__button {
+	}
+
+	&__login {
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: 400;
+		color: #FFFFFF;
+		margin-right: (52/20)+rem;
+		transition: all 0.6s ease 0.1s;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__signup {
+		padding: 12px 36px;
+		transition: all 0.6s ease 0.1s;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+}
