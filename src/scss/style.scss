@@ -67,8 +67,54 @@ main {
 
 //HEADER
 .head {
-	max-height: 850px;
+	height: 850px;
 	background: linear-gradient(291.45deg, #F83B7F -3.37%, #FAAF1E 114.15%);
+	//position: relative;
+	/* &::before {
+		content: "";
+		position: absolute;
+		width: 1550px;
+		height: 0;
+		left: -36%;
+		bottom: 0px;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		transform: rotate(90deg);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 1550px;
+		height: 0;
+		right: -36%;
+		bottom: 0px;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		transform: rotate(90deg);
+	} */
+}
+.line {
+	position: absolute;
+	width: 100%;
+	height: 0;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	transform: rotate(90deg);
+	&-right {
+		left: -36%;
+		bottom: 0;
+		//position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			background: linear-gradient(99.25deg, #F82690 -85.14%, #FAAF1E 186%);
+			border-radius: 50%;
+			border: 3px solid #FFFFFF;
+		}
+	}
+	&-left {
+		right: -36%;
+		bottom: 0px;
+	}
 }
 .header {
 	display: flex;
@@ -128,3 +174,63 @@ main {
 		}
 	}
 }
+//end HEADER
+
+//start MAIN PAGE
+.main-page {
+	margin-top: 22px;
+	&__socials {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		margin-left: 98px;
+		bottom: 0;
+		align-items: center;
+	}
+
+	&__social {
+		&:not(:last-child) {
+			margin-bottom: 57px;
+		}
+		transition: all 0.3s ease 0.1s;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 90px;
+		line-height: 113%;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 28px;
+	}
+
+	&__desc {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 113.5%;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 32px;
+	}
+
+	&__img {
+		display: flex;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__phone {
+		&:not(:last-child) {
+			margin-right: -150px;
+		}
+		max-height: 566px;
+	}
+	&_center {
+		transform: scale(1.1);
+	}
+}
+//end MAIN PAGE
